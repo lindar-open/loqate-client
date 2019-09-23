@@ -28,7 +28,7 @@ import java.util.Map;
 public class AddressVerificationResource extends BaseResource {
 
     private final RequestFactory requestFactory;
-    private final String key;
+    private final String         key;
 
     public Result<List<AddressDescription>> find(FindRequest request) {
         String path = LoqateConstants.ADDRESS_VERIFICATION_FIND_ENDPOINT;
@@ -75,7 +75,7 @@ public class AddressVerificationResource extends BaseResource {
         Result<List<FullAddress>> listResult = castToTypeArray(response.getServerResponse(), FullAddress.class);
 
         return listResult.filter(data -> data != null && !data.isEmpty())
-                .map(data -> data.get(0));
+                         .map(data -> data.get(0));
     }
 
     private <T> Result<List<T>> castToTypeArray(String response, Class<T> type) {
@@ -100,7 +100,6 @@ public class AddressVerificationResource extends BaseResource {
                         .build();
             }
         }
-
 
         Type typeToken = TypeToken.getParameterized(ArrayList.class, type).getType();
         List<T> results = new Gson().fromJson(items, typeToken);

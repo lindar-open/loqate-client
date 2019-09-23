@@ -7,22 +7,21 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
-@Builder
+@Data @Builder
 public class FindRequest {
     @Builder.Default
-    private String text = "";
+    private String       text         = "";
     @Builder.Default
-    private String container = "";
+    private String       container    = "";
     @Builder.Default
-    private String origin = "";
+    private String       origin       = "";
     @Builder.Default
-    private List<String> countries = new ArrayList<>();
+    private List<String> countries    = new ArrayList<>();
     @Builder.Default
-    private int limit = 10;
+    private int          limit        = 10;
     @Builder.Default
-    private String language = "en-gb";
+    private String       language     = "en-gb";
     @Builder.Default
-    private boolean isMiddleware = true;
+    private boolean      isMiddleware = true;
     private List<String> fields;
 }

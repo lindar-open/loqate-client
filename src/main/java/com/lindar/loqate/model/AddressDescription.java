@@ -7,19 +7,14 @@ import lombok.Data;
 @Data
 public class AddressDescription {
 
-    @SerializedName("Id")
-    @Expose
+    @Expose @SerializedName("Id")
     private String id;
-    @SerializedName("Type")
-    @Expose
+    @Expose @SerializedName("Type")
     private String type;
-    @SerializedName("Text")
-    @Expose
+    @Expose @SerializedName("Text")
     private String text;
-    @SerializedName("Highlight")
-    @Expose
+    @Expose @SerializedName("Highlight")
     private String highlight;
-    @SerializedName("Description")
-    @Expose
+    @Expose @SerializedName("Description")
     private String description;
 }

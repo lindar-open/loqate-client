@@ -6,175 +6,118 @@ import lombok.Data;
 
 @Data
 public class FullAddress {
-    @SerializedName("Id")
-    @Expose
-    public String id;
-    @SerializedName("DomesticId")
-    @Expose
-    public String domesticId;
-    @SerializedName("Language")
-    @Expose
-    public String language;
-    @SerializedName("LanguageAlternatives")
-    @Expose
-    public String languageAlternatives;
-    @SerializedName("Department")
-    @Expose
-    public String department;
-    @SerializedName("Company")
-    @Expose
-    public String company;
-    @SerializedName("SubBuilding")
-    @Expose
-    public String subBuilding;
-    @SerializedName("BuildingNumber")
-    @Expose
-    public String buildingNumber;
-    @SerializedName("BuildingName")
-    @Expose
-    public String buildingName;
-    @SerializedName("SecondaryStreet")
-    @Expose
-    public String secondaryStreet;
-    @SerializedName("Street")
-    @Expose
-    public String street;
-    @SerializedName("Block")
-    @Expose
-    public String block;
-    @SerializedName("Neighbourhood")
-    @Expose
-    public String neighbourhood;
-    @SerializedName("District")
-    @Expose
-    public String district;
-    @SerializedName("City")
-    @Expose
-    public String city;
-    @SerializedName("Line1")
-    @Expose
-    public String line1;
-    @SerializedName("Line2")
-    @Expose
-    public String line2;
-    @SerializedName("Line3")
-    @Expose
-    public String line3;
-    @SerializedName("Line4")
-    @Expose
-    public String line4;
-    @SerializedName("Line5")
-    @Expose
-    public String line5;
-    @SerializedName("AdminAreaName")
-    @Expose
-    public String adminAreaName;
-    @SerializedName("AdminAreaCode")
-    @Expose
-    public String adminAreaCode;
-    @SerializedName("Province")
-    @Expose
-    public String province;
-    @SerializedName("ProvinceName")
-    @Expose
-    public String provinceName;
-    @SerializedName("ProvinceCode")
-    @Expose
-    public String provinceCode;
-    @SerializedName("PostalCode")
-    @Expose
-    public String postalCode;
-    @SerializedName("CountryName")
-    @Expose
-    public String countryName;
-    @SerializedName("CountryIso2")
-    @Expose
-    public String countryIso2;
-    @SerializedName("CountryIso3")
-    @Expose
-    public String countryIso3;
-    @SerializedName("CountryIsoNumber")
-    @Expose
+    @Expose @SerializedName("Id")
+    public String  id;
+    @Expose @SerializedName("DomesticId")
+    public String  domesticId;
+    @Expose @SerializedName("Language")
+    public String  language;
+    @Expose @SerializedName("LanguageAlternatives")
+    public String  languageAlternatives;
+    @Expose @SerializedName("Department")
+    public String  department;
+    @Expose @SerializedName("Company")
+    public String  company;
+    @Expose @SerializedName("SubBuilding")
+    public String  subBuilding;
+    @Expose @SerializedName("BuildingNumber")
+    public String  buildingNumber;
+    @Expose @SerializedName("BuildingName")
+    public String  buildingName;
+    @Expose @SerializedName("SecondaryStreet")
+    public String  secondaryStreet;
+    @Expose @SerializedName("Street")
+    public String  street;
+    @Expose @SerializedName("Block")
+    public String  block;
+    @Expose @SerializedName("Neighbourhood")
+    public String  neighbourhood;
+    @Expose @SerializedName("District")
+    public String  district;
+    @Expose @SerializedName("City")
+    public String  city;
+    @Expose @SerializedName("Line1")
+    public String  line1;
+    @Expose @SerializedName("Line2")
+    public String  line2;
+    @Expose @SerializedName("Line3")
+    public String  line3;
+    @Expose @SerializedName("Line4")
+    public String  line4;
+    @Expose @SerializedName("Line5")
+    public String  line5;
+    @Expose @SerializedName("AdminAreaName")
+    public String  adminAreaName;
+    @Expose @SerializedName("AdminAreaCode")
+    public String  adminAreaCode;
+    @Expose @SerializedName("Province")
+    public String  province;
+    @Expose @SerializedName("ProvinceName")
+    public String  provinceName;
+    @Expose @SerializedName("ProvinceCode")
+    public String  provinceCode;
+    @Expose @SerializedName("PostalCode")
+    public String  postalCode;
+    @Expose @SerializedName("CountryName")
+    public String  countryName;
+    @Expose @SerializedName("CountryIso2")
+    public String  countryIso2;
+    @Expose @SerializedName("CountryIso3")
+    public String  countryIso3;
+    @Expose @SerializedName("CountryIsoNumber")
     public Integer countryIsoNumber;
-    @SerializedName("SortingNumber1")
-    @Expose
-    public String sortingNumber1;
-    @SerializedName("SortingNumber2")
-    @Expose
-    public String sortingNumber2;
-    @SerializedName("Barcode")
-    @Expose
-    public String barcode;
-    @SerializedName("POBoxNumber")
-    @Expose
-    public String pOBoxNumber;
-    @SerializedName("Label")
-    @Expose
-    public String label;
-    @SerializedName("Type")
-    @Expose
-    public String type;
-    @SerializedName("DataLevel")
-    @Expose
-    public String dataLevel;
-    @SerializedName("Field1")
-    @Expose
-    public String field1;
-    @SerializedName("Field2")
-    @Expose
-    public String field2;
-    @SerializedName("Field3")
-    @Expose
-    public String field3;
-    @SerializedName("Field4")
-    @Expose
-    public String field4;
-    @SerializedName("Field5")
-    @Expose
-    public String field5;
-    @SerializedName("Field6")
-    @Expose
-    public String field6;
-    @SerializedName("Field7")
-    @Expose
-    public String field7;
-    @SerializedName("Field8")
-    @Expose
-    public String field8;
-    @SerializedName("Field9")
-    @Expose
-    public String field9;
-    @SerializedName("Field10")
-    @Expose
-    public String field10;
-    @SerializedName("Field11")
-    @Expose
-    public String field11;
-    @SerializedName("Field12")
-    @Expose
-    public String field12;
-    @SerializedName("Field13")
-    @Expose
-    public String field13;
-    @SerializedName("Field14")
-    @Expose
-    public String field14;
-    @SerializedName("Field15")
-    @Expose
-    public String field15;
-    @SerializedName("Field16")
-    @Expose
-    public String field16;
-    @SerializedName("Field17")
-    @Expose
-    public String field17;
-    @SerializedName("Field18")
-    @Expose
-    public String field18;
-    @SerializedName("Field19")
-    @Expose
-    public String field19;
-    @SerializedName("Field20")
-    @Expose
-    public String field20;
+    @Expose @SerializedName("SortingNumber1")
+    public String  sortingNumber1;
+    @Expose @SerializedName("SortingNumber2")
+    public String  sortingNumber2;
+    @Expose @SerializedName("Barcode")
+    public String  barcode;
+    @Expose @SerializedName("POBoxNumber")
+    public String  pOBoxNumber;
+    @Expose @SerializedName("Label")
+    public String  label;
+    @Expose @SerializedName("Type")
+    public String  type;
+    @Expose @SerializedName("DataLevel")
+    public String  dataLevel;
+    @Expose @SerializedName("Field1")
+    public String  field1;
+    @Expose @SerializedName("Field2")
+    public String  field2;
+    @Expose @SerializedName("Field3")
+    public String  field3;
+    @Expose @SerializedName("Field4")
+    public String  field4;
+    @Expose @SerializedName("Field5")
+    public String  field5;
+    @Expose @SerializedName("Field6")
+    public String  field6;
+    @Expose @SerializedName("Field7")
+    public String  field7;
+    @Expose @SerializedName("Field8")
+    public String  field8;
+    @Expose @SerializedName("Field9")
+    public String  field9;
+    @Expose @SerializedName("Field10")
+    public String  field10;
+    @Expose @SerializedName("Field11")
+    public String  field11;
+    @Expose @SerializedName("Field12")
+    public String  field12;
+    @Expose @SerializedName("Field13")
+    public String  field13;
+    @Expose @SerializedName("Field14")
+    public String  field14;
+    @Expose @SerializedName("Field15")
+    public String  field15;
+    @Expose @SerializedName("Field16")
+    public String  field16;
+    @Expose @SerializedName("Field17")
+    public String  field17;
+    @Expose @SerializedName("Field18")
+    public String  field18;
+    @Expose @SerializedName("Field19")
+    public String  field19;
+    @Expose @SerializedName("Field20")
+    public String  field20;
 }

@@ -4,8 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
 abstract class BaseResource {
-
-    String urlEncode(String param){
+    String urlEncode(String param) {
         try {
             return URLEncoder.encode(
                     param,
