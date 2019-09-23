@@ -37,8 +37,8 @@
 
     <distributionManagement>
         <snapshotRepository>
-            <id>lindar-maven-repo</id>
-            <url>http://nexus-lindar.mircloud.host/content/repositories/lindar-maven-repo/</url>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
             <id>ossrh</id>
