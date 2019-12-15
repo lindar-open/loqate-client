@@ -3,6 +3,7 @@ package com.lindar.loqate;
 import com.lindar.loqate.model.AddressDescription;
 import com.lindar.loqate.model.FindRequest;
 import com.lindar.loqate.model.FullAddress;
+import com.lindar.loqate.util.RequestFactory;
 import com.lindar.wellrested.vo.Result;
 import com.lindar.wellrested.vo.WellRestedResponse;
 import org.junit.Before;

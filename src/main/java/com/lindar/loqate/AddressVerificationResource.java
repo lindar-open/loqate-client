@@ -8,6 +8,8 @@ import com.google.gson.reflect.TypeToken;
 import com.lindar.loqate.model.AddressDescription;
 import com.lindar.loqate.model.FindRequest;
 import com.lindar.loqate.model.FullAddress;
+import com.lindar.loqate.util.LoqateConstants;
+import com.lindar.loqate.util.RequestFactory;
 import com.lindar.wellrested.vo.Result;
 import com.lindar.wellrested.vo.ResultBuilder;
 import com.lindar.wellrested.vo.WellRestedResponse;
@@ -31,7 +33,7 @@ public class AddressVerificationResource extends BaseResource {
     private final String         key;
 
     public Result<List<AddressDescription>> find(FindRequest request) {
-        String path = LoqateConstants.ADDRESS_VERIFICATION_FIND_ENDPOINT;
+        String path = LoqateConstants.EMAIL_VERIFICATION_ENDPOINT;
         Map<String, String> params = new HashMap<>();
         params.put("Key", this.key);
         params.put("Text", urlEncode(request.getText()));
