@@ -33,7 +33,7 @@ public class AddressVerificationResource extends BaseResource {
     private final String         key;
 
     public Result<List<AddressDescription>> find(FindRequest request) {
-        String path = LoqateConstants.EMAIL_VERIFICATION_ENDPOINT;
+        String path = LoqateConstants.ADDRESS_VERIFICATION_FIND_ENDPOINT;
         Map<String, String> params = new HashMap<>();
         params.put("Key", this.key);
         params.put("Text", urlEncode(request.getText()));
