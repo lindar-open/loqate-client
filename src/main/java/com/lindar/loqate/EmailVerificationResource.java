@@ -9,7 +9,6 @@ import com.lindar.wellrested.vo.ResultBuilder;
 import com.lindar.wellrested.vo.WellRestedResponse;
 import lindar.acolyte.util.ListsAcolyte;
 import lindar.acolyte.util.UrlAcolyte;
-import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -41,7 +40,7 @@ public class EmailVerificationResource extends BaseResource {
         path = UrlAcolyte.addParams(path, params);
 
         WellRestedResponse response = requestFactory.makeRequest(path);
-        log.info(response.getServerResponse());
+        log.debug("Loqate Address Response: {}", response.getServerResponse());
         return handleResponse(response);
     }
 
