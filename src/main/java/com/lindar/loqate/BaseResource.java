@@ -5,6 +5,10 @@ import java.net.URLEncoder;
 
 abstract class BaseResource {
     String urlEncode(String param) {
+        if (param == null) {
+            return "";
+        }
+
         try {
             return URLEncoder.encode(
                     param,
