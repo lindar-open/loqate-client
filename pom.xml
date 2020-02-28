@@ -50,13 +50,13 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.10</version>
+            <version>1.18.12</version>
         </dependency>
 
         <dependency>
             <groupId>com.lindar</groupId>
             <artifactId>well-rested-client</artifactId>
-            <version>1.6.1</version>
+            <version>1.7.0</version>
         </dependency>
 
         <dependency>
@@ -103,7 +103,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.2.1</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
