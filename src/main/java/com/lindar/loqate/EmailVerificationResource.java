@@ -20,15 +20,16 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class EmailVerificationResource extends BaseResource {
 
-    private final RequestFactory requestFactory;
     private final String         key;
+    private final String         baseUrl;
+    private final RequestFactory requestFactory;
 
     public Result<EmailVerificationResponse> verifyEmail(String email) {
         return verifyEmail(email, null);
     }
 
     public Result<EmailVerificationResponse> verifyEmail(String email, Integer timeout) {
-        String path = LoqateConstants.EMAIL_VERIFICATION_ENDPOINT;
+        String path = UrlAcolyte.safeConcat(baseUrl, LoqateConstants.EMAIL_VERIFICATION_ENDPOINT);
 
         Map<String, String> params = new HashMap<>();
         params.put("Key", this.key);

@@ -8,6 +8,7 @@ import com.lindar.wellrested.json.GsonJsonMapper;
 import com.lindar.wellrested.vo.Result;
 import com.lindar.wellrested.vo.WellRestedResponse;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -22,20 +23,21 @@ import static org.mockito.ArgumentMatchers.any;
 @RunWith(MockitoJUnitRunner.class)
 public class AddressVerificationResourceTest {
 
-    private final LoqateClient client = LoqateClient.of(System.getProperty("LOQATE_KEY"));
-
     @Mock
     private RequestFactory requestFactory;
     private LoqateClient   clientMocked;
 
     @Before
     public void setup() {
-        clientMocked = LoqateClient.of(System.getProperty("LOQATE_KEY"), requestFactory);
+        clientMocked = LoqateClient.of("key", requestFactory);
     }
 
     @Test
+    @Ignore("Calling api.addressy.com")
     public void testFind() {
+        LoqateClient client = LoqateClient.of(System.getProperty("LOQATE_KEY"));
         FindRequest request = FindRequest.builder().text("wr5 3da").build();
+
         Result<List<AddressDescription>> response = client.addressVerification().find(request);
         assertNotNull(response.getData());
     }
