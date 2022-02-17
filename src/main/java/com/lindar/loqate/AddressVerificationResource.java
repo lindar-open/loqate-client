@@ -29,11 +29,12 @@ import java.util.Map;
 @RequiredArgsConstructor(access = AccessLevel.PACKAGE)
 public class AddressVerificationResource extends BaseResource {
 
-    private final RequestFactory requestFactory;
     private final String         key;
+    private final String         baseUrl;
+    private final RequestFactory requestFactory;
 
     public Result<List<AddressDescription>> find(FindRequest request) {
-        String path = LoqateConstants.ADDRESS_VERIFICATION_FIND_ENDPOINT;
+        String path = UrlAcolyte.safeConcat(baseUrl, LoqateConstants.ADDRESS_VERIFICATION_FIND_ENDPOINT);
         Map<String, String> params = new HashMap<>();
         params.put("Key", this.key);
         params.put("Text", urlEncode(request.getText()));
@@ -55,7 +56,7 @@ public class AddressVerificationResource extends BaseResource {
     }
 
     public Result<FullAddress> retrieve(String id, List<String> fieldFormats) {
-        String path = LoqateConstants.ADDRESS_VERIFICATION_RETRIEVE_ENDPOINT;
+        String path = UrlAcolyte.safeConcat(baseUrl, LoqateConstants.ADDRESS_VERIFICATION_RETRIEVE_ENDPOINT);
         Map<String, String> params = new HashMap<>();
         params.put("Key", this.key);
         params.put("Id", urlEncode(id));
@@ -97,9 +98,9 @@ public class AddressVerificationResource extends BaseResource {
             JsonObject firstElement = items.get(0).getAsJsonObject();
             if (firstElement.has("Error")) {
                 return ResultBuilder.<List<T>>failed()
-                        .msg(firstElement.get("Description").getAsString())
-                        .code(firstElement.get("Error").getAsString())
-                        .build();
+                                    .msg(firstElement.get("Description").getAsString())
+                                    .code(firstElement.get("Error").getAsString())
+                                    .build();
             }
         }
 
