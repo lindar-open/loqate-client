@@ -1,4 +1,4 @@
-# Loquate client
+# Loqate client
 
 This repository is a Java 3rd party APIs wrapper for APIs provided by [Loqate](https://www.loqate.com/) by [GBG](https://www.gbgplc.com/en/). 
 Loqate was formerly known as Addressy.
